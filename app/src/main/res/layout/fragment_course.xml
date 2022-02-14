@@ -60,7 +60,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="800dp">
 
             <VideoView
                 android:id="@+id/courseVideo"
@@ -92,7 +92,8 @@
                 <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
                     android:layout_height="96dp"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="horizontal">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -163,59 +164,19 @@
                 </androidx.core.widget.NestedScrollView>
             </LinearLayout>
 
-            <LinearLayout
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView3"
+                android:name="androidx.navigation.fragment.NavHostFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:orientation="vertical"
-                android:paddingHorizontal="18dp"
+                app:defaultNavHost="true"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layoutManba"
-                android:layout_marginTop="10dp">
+                app:navGraph="@navigation/kurs_navigation" />
 
-                <TextView
-                    android:id="@+id/titleText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/source_sans_pro_semi_bold"
-                    android:letterSpacing="0.02"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    tools:text="Lorem ipsum dolor sit" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/source_sans_pro_extralight"
-                    android:letterSpacing="0.02"
-                    android:layout_marginVertical="10dp"
-                    android:maxLength="300"
-                    android:text="Lorem ipsum dolor sit amet consectetur ameturLorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="251dp"
-                    android:layout_marginVertical="5dp"
-                    android:scaleType="fitXY"
-                    tools:src="@tools:sample/backgrounds/scenic" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="foto: link.domen"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris diam dignissim nisi eu, vel eros, ipsum, mi posuere. Quam mi adipiscing ut faucibus dui a erat. A vel faucibus netus lectus ut sed diam. Amet tellus, sapien enim dictum semper. Faucibus purus in adipiscing pellentesque. Nec proin phasellus lacus, netus nulla egestas."
-                    android:textSize="16sp"
-                    android:fontFamily="@font/source_sans_pro_extralight"
-                    android:layout_marginVertical="10dp"/>
-            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
