@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import sarvarmasharipov72.edulife.R
 import sarvarmasharipov72.edulife.ui.Courses.model.MyCourse
 import sarvarmasharipov72.edulife.ui.Courses.model.Recommended
+import sarvarmasharipov72.edulife.ui.Login.LoginFragmentTwo
 import java.lang.StringBuilder
 
 class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() {
@@ -57,16 +58,24 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
             discount.text = recommended.discount.toString()
         }
 
-        fun changes(price: String): String{
+        fun changes(price: String): String {
             return ""
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoursesViewHolder {
         return when (viewType) {
-            MY_COURSE -> MyCourseHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_courses_my_course, parent, false))
-            FILTER -> MyCourseFilter(LayoutInflater.from(parent.context).inflate(R.layout.filter_item, parent, false))
-            else -> RecommendedCourse(LayoutInflater.from(parent.context).inflate(R.layout.recommended_item, parent, false))
+            MY_COURSE -> MyCourseHolder(
+                LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_courses_my_course, parent, false)
+            )
+            FILTER -> MyCourseFilter(
+                LayoutInflater.from(parent.context).inflate(R.layout.filter_item, parent, false)
+            )
+            else -> RecommendedCourse(
+                LayoutInflater.from(parent.context)
+                    .inflate(R.layout.recommended_item, parent, false)
+            )
         }
     }
 
@@ -77,7 +86,7 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
         }
     }
 
-    override fun getItemCount(): Int = listOne.size + listTwo.size +1
+    override fun getItemCount(): Int = listOne.size + listTwo.size + 1
 
     override fun getItemViewType(position: Int): Int {
         return when {
@@ -92,5 +101,11 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
                 RECOMMENDED
             }
         }
+    }
+
+    fun setData(listOne: List<MyCourse>, listTwo: List<Recommended>) {
+        this.listOne = listOne
+        this.listTwo = listTwo
+        notifyDataSetChanged()
     }
 }
