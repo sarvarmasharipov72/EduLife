@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Welcome.WelcomeFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonBoshlash"
+        android:layout_width="324dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#007E6F"
+        android:text="@string/boshlash"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonKirish"
+        android:layout_width="324dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/kirish"
+        android:textColor="#007E6F"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBoshlash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/source_sans_pro_black"
+        android:text="@string/titleText"
+        android:theme="@style/suniy_intel"
+        app:layout_constraintBottom_toTopOf="@id/titleSubText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/titleSubText"
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/source_sans_pro_black"
+        android:text="@string/suniy_intel"
+        android:theme="@style/suniy_intel"
+        app:layout_constraintBottom_toTopOf="@id/buttonKirish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        android:maxHeight="70dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="352dp"
+        android:layout_height="248dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/titleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_undraw_online_learning"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

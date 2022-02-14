@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EFEFEF">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="620dp"
+    tools:context=".ui.HomeSubFragment.HomeSubFragment"
+    android:background="#EFEFEF">
+
+    <ImageView
+        android:id="@+id/imageCarousel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/unsplash"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageCarousel"
+        android:background="@drawable/bakcground_card"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="14dp">
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            app:layout_constraintTop_toTopOf="@id/taskImage"
+            app:layout_constraintEnd_toEndOf="@id/taskImage"
+            android:background="@drawable/ellipse"
+            android:text="@string/_3"
+            android:elevation="2dp"
+            android:gravity="center"
+            />
+
+        <ImageButton
+            android:id="@+id/taskImage"
+            android:layout_width="78dp"
+            android:layout_height="68dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_vazifalar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/taskImage4"
+            app:layout_constraintEnd_toStartOf="@id/taskImage2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/taskName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/taskImage"
+            app:layout_constraintStart_toStartOf="@id/taskImage"
+            app:layout_constraintEnd_toEndOf="@id/taskImage"
+            android:fontFamily="@font/source_sans_pro_extralight"
+            android:text="@string/vazifalar"
+            android:textSize="16sp"
+            />
+
+        <ImageButton
+            android:id="@+id/taskImage2"
+            android:layout_width="78dp"
+            android:layout_height="68dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_online_dars"
+            app:layout_constraintBottom_toTopOf="@id/taskImage5"
+            app:layout_constraintEnd_toStartOf="@id/taskImage3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/taskImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/taskName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/taskImage2"
+            app:layout_constraintStart_toStartOf="@id/taskImage2"
+            app:layout_constraintEnd_toEndOf="@id/taskImage2"
+            android:text="@string/online_dars"
+            android:fontFamily="@font/source_sans_pro_extralight"
+            android:textSize="16sp"
+            />
+
+        <ImageButton
+            android:id="@+id/taskImage3"
+            android:layout_width="78dp"
+            android:layout_height="68dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_reyting"
+            app:layout_constraintBottom_toTopOf="@id/taskImage6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/taskImage2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/taskName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/taskImage3"
+            app:layout_constraintStart_toStartOf="@id/taskImage3"
+            app:layout_constraintEnd_toEndOf="@id/taskImage3"
+            android:text="@string/reyting"
+            android:fontFamily="@font/source_sans_pro_extralight"
+            android:textSize="16sp"
+            />
+
+        <ImageButton
+            android:id="@+id/taskImage4"
+            android:layout_width="78dp"
+            android:layout_height="68dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_savollar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/taskImage2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/taskImage"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/taskName4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/taskImage4"
+            app:layout_constraintStart_toStartOf="@id/taskImage4"
+            app:layout_constraintEnd_toEndOf="@id/taskImage4"
+            android:text="@string/savollar"
+            android:fontFamily="@font/source_sans_pro_extralight"
+            android:textSize="16sp"
+            />
+
+        <ImageButton
+            android:id="@+id/taskImage5"
+            android:layout_width="78dp"
+            android:layout_height="68dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_news"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/taskImage3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/taskImage"
+            app:layout_constraintTop_toBottomOf="@id/taskImage2"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/taskName5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/taskImage5"
+            app:layout_constraintStart_toStartOf="@id/taskImage5"
+            app:layout_constraintEnd_toEndOf="@id/taskImage5"
+            android:text="@string/yangiliklar"
+            android:fontFamily="@font/source_sans_pro_extralight"
+            android:textSize="16sp"
+            />
+
+        <ImageButton
+            android:id="@+id/taskImage6"
+            android:layout_width="78dp"
+            android:layout_height="68dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_kurslar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/taskImage2"
+            app:layout_constraintTop_toBottomOf="@+id/taskImage3"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/taskName6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/taskImage6"
+            app:layout_constraintStart_toStartOf="@id/taskImage6"
+            app:layout_constraintEnd_toEndOf="@id/taskImage6"
+            android:text="@string/kurslar"
+            android:fontFamily="@font/source_sans_pro_extralight"
+            android:textSize="16sp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/newCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="18dp"
+        android:text="@string/new_course"
+        android:textSize="16sp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/newCourse"
+        android:orientation="horizontal"
+        tools:listitem="@layout/list_item_home"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginStart="5dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">EduLife</string>
+    <string name="titleText">EduLifega Xush kelibsiz</string>
+    <string name="boshlash">Boshlash</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="suniy_intel">
+Suniy intelekt yordamida onlayn ta\'lim oling va lorem ipsum dolor sit amet cons
+</string>
+    <string name="kirish">Kirish</string>
+    <string name="foydalanish_shartlari_bilan_tamishib_chiqdim">Foydalanish shartlari bilan tanishib chiqdim</string>
+    <string name="edulife">Edulife</string>
+    <string name="new_course">Yangi kurslar</string>
+    <string name="text_courses">Ingiliz tilini beginner darajasiga atigi 3 oyda chiqing va keyingi kur...</string>
+    <string name="vazifalar">Vazifalar</string>
+    <string name="online_dars">Online dars</string>
+    <string name="reyting">Reyting</string>
+    <string name="savollar">Savollar</string>
+    <string name="yangiliklar">Yangiliklar</string>
+    <string name="homeText">Home</string>
+    <string name="books">Books</string>
+    <string name="video">Video</string>
+    <string name="message">Message</string>
+    <string name="setting">Setting</string>
+    <string name="_33">33%</string>
+    <string name="kurslar">Kurslar</string>
+    <string name="_3">3</string>
+    <string name="kurs">Kurs</string>
+    <string name="beginner">Beginner</string>
+    <string name="xorazm_viloyati_xonqa_tumani">Xorazm viloyati, Xonqa tumani</string>
+    <string name="faruxbek_bozorboyev">Faruxbek Bozorboyev</string>
+    <string name="shaxsiy_id_0123">Shaxsiy ID 0123</string>
+    <string name="balans">Balans:</string>
+    <string name="_210_000_uzs"> 210 000 UZS</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="keyingisi">Keyingisi</string>
+
+</resources>

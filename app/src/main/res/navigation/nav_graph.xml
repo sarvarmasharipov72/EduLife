@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="sarvarmasharipov72.edulife.ui.Login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_loginFragmentOne"
+            app:destination="@id/loginFragmentOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="sarvarmasharipov72.edulife.ui.Welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_welcomeFragmentOne"
+            app:destination="@id/welcomeFragmentOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="sarvarmasharipov72.edulife.ui.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_homeFragment_to_rating"
+            app:destination="@id/rating" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="sarvarmasharipov72.edulife.ui.Profile.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rating"
+        android:name="sarvarmasharipov72.edulife.ui.Rating.Rating"
+        android:label="fragment_rating"
+        tools:layout="@layout/fragment_rating" >
+        <action
+            android:id="@+id/action_rating_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/course"
+        android:name="sarvarmasharipov72.edulife.ui.Courses.Course.Course"
+        android:label="fragment_course"
+        tools:layout="@layout/fragment_course" />
+    <fragment
+        android:id="@+id/welcomeFragmentOne"
+        android:name="sarvarmasharipov72.edulife.ui.Welcome.WelcomeFragmentOne"
+        android:label="fragment_welcome_one"
+        tools:layout="@layout/fragment_welcome_one" >
+        <action
+            android:id="@+id/action_welcomeFragmentOne_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_welcomeFragmentOne_to_welcomeFragmentTwo"
+            app:destination="@id/welcomeFragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragmentTwo"
+        android:name="sarvarmasharipov72.edulife.ui.Welcome.WelcomeFragmentTwo"
+        android:label="fragment_welcome_two"
+        tools:layout="@layout/fragment_welcome_two" >
+        <action
+            android:id="@+id/action_welcomeFragmentTwo_to_welcomeFragmentOne"
+            app:destination="@id/welcomeFragmentOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragmentOne"
+        android:name="sarvarmasharipov72.edulife.ui.Login.LoginFragmentOne"
+        android:label="fragment_login_one"
+        tools:layout="@layout/fragment_login_one" >
+        <action
+            android:id="@+id/action_loginFragmentOne_to_loginFragmentTwo"
+            app:destination="@id/loginFragmentTwo" />
+        <action
+            android:id="@+id/action_loginFragmentOne_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragmentTwo"
+        android:name="sarvarmasharipov72.edulife.ui.Login.LoginFragmentTwo"
+        android:label="fragment_login_two"
+        tools:layout="@layout/fragment_login_two" >
+        <action
+            android:id="@+id/action_loginFragmentTwo_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragmentTwo_to_loginFragmentOne"
+            app:destination="@id/loginFragmentOne" />
+    </fragment>
+</navigation>
