@@ -44,11 +44,11 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
     class MyCourseFilter(view: View) : CoursesViewHolder(view)
 
     class RecommendedCourse(view: View) : CoursesViewHolder(view) {
-        private val levelCourse = view.findViewById<TextView>(R.id.levelCourse)
-        private val nameCource = view.findViewById<TextView>(R.id.nameCource)
-        private val textCource = view.findViewById<TextView>(R.id.textCource)
-        private val price = view.findViewById<TextView>(R.id.price)
-        private val discount = view.findViewById<TextView>(R.id.discount)
+        private val levelCourse = view.findViewById<TextView>(R.id.levelCourseCourse)
+        private val nameCource = view.findViewById<TextView>(R.id.nameCourceCourse)
+        private val textCource = view.findViewById<TextView>(R.id.textCourceCourse)
+        private val price = view.findViewById<TextView>(R.id.priceCourse)
+        private val discount = view.findViewById<TextView>(R.id.discountCourse)
 
         fun bind(recommended: Recommended) {
             levelCourse.text = recommended.levelCourse
@@ -82,7 +82,7 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
     override fun onBindViewHolder(holder: CoursesViewHolder, position: Int) {
         when (holder) {
             is MyCourseHolder -> holder.bind(listOne[position])
-            is RecommendedCourse -> holder.bind(listTwo[position + listOne.size])
+            is RecommendedCourse -> holder.bind(listTwo[position - listOne.size - 1])
         }
     }
 
@@ -90,7 +90,7 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
 
     override fun getItemViewType(position: Int): Int {
         return when {
-            position < listOne.size - 1 -> {
+            position < listOne.size -> {
                 MY_COURSE
             }
             position == listOne.size -> {

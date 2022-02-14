@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/course">
+    app:startDestination="@id/welcomeFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_homeFragment_to_rating"
             app:destination="@id/rating" />
+        <action
+            android:id="@+id/action_homeFragment_to_courses"
+            app:destination="@id/courses" />
     </fragment>
     <fragment
         android:id="@+id/profile"
@@ -63,7 +66,11 @@
         android:id="@+id/course"
         android:name="sarvarmasharipov72.edulife.ui.Courses.Course.Course"
         android:label="fragment_course"
-        tools:layout="@layout/fragment_course" />
+        tools:layout="@layout/fragment_course" >
+        <action
+            android:id="@+id/action_course_to_courses"
+            app:destination="@id/courses" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragmentOne"
         android:name="sarvarmasharipov72.edulife.ui.Welcome.WelcomeFragmentOne"
@@ -108,5 +115,16 @@
         <action
             android:id="@+id/action_loginFragmentTwo_to_loginFragmentOne"
             app:destination="@id/loginFragmentOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/courses"
+        android:name="sarvarmasharipov72.edulife.ui.Courses.Courses"
+        android:label="Courses" >
+        <action
+            android:id="@+id/action_courses_to_course"
+            app:destination="@id/course" />
+        <action
+            android:id="@+id/action_courses_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
