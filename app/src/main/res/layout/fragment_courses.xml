@@ -6,16 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#EFEFEF">
+    android:background="#E6F1F0">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="620dp"
-
         tools:context=".ui.Courses.Courses"
         android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:background="#EFEFEF">
+        android:paddingEnd="18dp">
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -34,6 +32,7 @@
             app:layout_constraintTop_toBottomOf="@id/textView"
             android:layout_marginTop="10dp"
             tools:listitem="@layout/item_courses_my_course"
+            android:background="#E6F1F0"
 
             />
     </androidx.constraintlayout.widget.ConstraintLayout>

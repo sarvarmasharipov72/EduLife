@@ -55,7 +55,7 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
             nameCource.text = recommended.nameCourse
             textCource.text = recommended.textCourse
             price.text = changes(recommended.price.toString())
-            discount.text = recommended.discount.toString()
+            discount.text = "${recommended.discount.toString()}%"
         }
 
         fun changes(price: String): String {
