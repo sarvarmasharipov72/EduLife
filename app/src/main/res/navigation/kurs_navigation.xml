@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/kurs_navigation"
     app:startDestination="@id/homeCourse">
     <fragment
         android:id="@+id/homeCourse"
         android:name="sarvarmasharipov72.edulife.ui.Courses.Course.HomeCourse"
-        android:label="HomeCourse" />
+        android:label="HomeCourse" >
+        <action
+            android:id="@+id/action_homeCourse_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="sarvarmasharipov72.edulife.ui.Tasks.TasksFragment"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks" />
 </navigation>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/bakcground_card">
+
+    <TextView
+        android:id="@+id/titleKurs"
+        android:layout_width="51dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/frame_271"
+        android:padding="3dp"
+        android:text="@string/kurs"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/levelCourse"
+        android:layout_width="83dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/frame_272"
+        android:padding="3dp"
+        android:text="@string/beginner"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/titleKurs"
+        app:layout_constraintStart_toEndOf="@id/titleKurs"
+        app:layout_constraintTop_toTopOf="@id/titleKurs" />
+
+    <ImageView
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_background_bulb"
+        android:padding="12dp"
+        android:src="@drawable/ic_bulb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameCource"
+        android:layout_width="167dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/source_sans_pro_regular"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleKurs"
+        tools:text="Ingiliz tili(Beginner)" />
+
+    <TextView
+        android:id="@+id/textCource"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/source_sans_pro_extralight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameCource"
+        tools:text="@string/text_courses" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCource"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="199.000 so'm"
+        android:fontFamily="@font/source_sans_pro_semi_bold"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/ellipse"
+        android:gravity="center"
+        android:text="@string/_33"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
