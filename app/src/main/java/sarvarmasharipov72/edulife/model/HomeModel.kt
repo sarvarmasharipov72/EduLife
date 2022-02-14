@@ -4,4 +4,5 @@ data class HomeModel(
     val name: String,
     val text: String,
     val sum: Double,
-    val skidka: Int)
+    val skidka: Int
+    )
