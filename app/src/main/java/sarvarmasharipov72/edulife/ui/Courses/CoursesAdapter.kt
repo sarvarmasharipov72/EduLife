@@ -58,24 +58,26 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
             discount.text = "${recommended.discount.toString()}%"
         }
 
-        fun changes(price: String): String {
-            return ""
+        fun changes(price: String): String{
+            val size:Int = price.length
+
+            return if (size <= 3 ) "$price so'm"
+            else {
+                val endWith = price.toInt()%1000
+                val startWith = price.toInt()/1000
+
+                return if (price.endsWith("000")) {
+                    "$startWith.000 so'm"
+                } else "$startWith.$endWith so'm"
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoursesViewHolder {
         return when (viewType) {
-            MY_COURSE -> MyCourseHolder(
-                LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_courses_my_course, parent, false)
-            )
-            FILTER -> MyCourseFilter(
-                LayoutInflater.from(parent.context).inflate(R.layout.filter_item, parent, false)
-            )
-            else -> RecommendedCourse(
-                LayoutInflater.from(parent.context)
-                    .inflate(R.layout.recommended_item, parent, false)
-            )
+            MY_COURSE -> MyCourseHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_courses_my_course, parent, false))
+            FILTER -> MyCourseFilter(LayoutInflater.from(parent.context).inflate(R.layout.filter_item, parent, false))
+            else -> RecommendedCourse(LayoutInflater.from(parent.context).inflate(R.layout.recommended_item, parent, false))
         }
     }
 
