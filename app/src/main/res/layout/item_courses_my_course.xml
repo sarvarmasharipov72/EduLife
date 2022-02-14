@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="142dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +10,7 @@
     android:layout_marginBottom="5dp"
     android:background="@color/white">
     <TextView
+        android:id="@+id/nameMyCourse"
         android:layout_width="159dp"
         android:layout_height="60dp"
         android:text="Web Design (UI/UX) design"
@@ -70,17 +72,20 @@
         app:layout_constraintEnd_toStartOf="@id/flowThree"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         />
+
     <TextView
         android:id="@+id/completeTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="4/17"
-        android:textSize="13sp"
-        android:textColor="@color/black"
-        android:letterSpacing="0.03"
+        android:layout_width="20dp"
+        android:layout_height="13dp"
+        android:fontFamily="@font/source_sans_pro_extralight"
         android:gravity="center"
+        android:letterSpacing="0.03"
         android:padding="1dp"
-        android:fontFamily="@font/source_sans_pro_extralight"/>
+        android:text="4/17"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="109dp" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
