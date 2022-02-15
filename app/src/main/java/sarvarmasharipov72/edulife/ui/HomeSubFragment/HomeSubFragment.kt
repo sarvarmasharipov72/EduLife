@@ -1,23 +1,22 @@
 package sarvarmasharipov72.edulife.ui.HomeSubFragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.core.os.bundleOf
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.setFragmentResult
+import androidx.fragment.app.*
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import sarvarmasharipov72.edulife.R
 import sarvarmasharipov72.edulife.ViewModel
 import sarvarmasharipov72.edulife.model.HomeModel
+import sarvarmasharipov72.edulife.ui.Home.HomeViewModel
 import sarvarmasharipov72.edulife.ui.Home.adapter.HomeAdapter
 
 class HomeSubFragment : Fragment() {
-
+    private val homeViewModel: HomeViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,8 +33,11 @@ class HomeSubFragment : Fragment() {
 
 //        Reyting OnClick
         view.findViewById<ImageButton>(R.id.taskImage3).setOnClickListener {
-            val result = "result"
-            setFragmentResult("request_key", bundleOf("bundle_key" to result))
+
+        }
+
+        view.findViewById<ImageButton>(R.id.taskImage6).setOnClickListener {
+            homeViewModel.itemSelected(true)
         }
         return view
     }
