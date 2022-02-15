@@ -1,9 +1,15 @@
 package sarvarmasharipov72.edulife.ui.Rating.adapter
 
+import android.graphics.Color
+import android.graphics.ColorSpace
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.RecyclerView
 import sarvarmasharipov72.edulife.R
 import sarvarmasharipov72.edulife.model.RatingModel
@@ -17,14 +23,24 @@ class RatingAdapter : RecyclerView.Adapter<RatingAdapter.RatingViewHolder>() {
     class HeaderViewHolder(itemView: View) : RatingViewHolder(itemView)
 
     class BodyViewHolder(itemView: View) : RatingViewHolder(itemView){
+        val container = itemView.findViewById<ConstraintLayout>(R.id.rating_body_container)
         val rating = itemView.findViewById<TextView>(R.id.rating)
         val ratingName = itemView.findViewById<TextView>(R.id.ratingName)
         val ratingCourse = itemView.findViewById<TextView>(R.id.ratingCourse)
         fun bind (rating: RatingModel) {
-            this.rating.text = rating.id.toString()
-            ratingName.text = rating.name
-            ratingCourse.text = rating.course
-
+            if (rating.id % 2 == 1) {
+                this.rating.text = rating.id.toString()
+                this.rating.setTextColor(ContextCompat.getColor(itemView.context, R.color.textColorGreen))
+                this.ratingName.setTextColor(ContextCompat.getColor(itemView.context, R.color.textColorGreen))
+                this.ratingCourse.setTextColor(ContextCompat.getColor(itemView.context, R.color.textColorGreen))
+                ratingName.text = rating.name
+                ratingCourse.text = rating.course
+            } else {
+                container.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.white))
+                this.rating.text = rating.id.toString()
+                ratingName.text = rating.name
+                ratingCourse.text = rating.course
+            }
         }
     }
 

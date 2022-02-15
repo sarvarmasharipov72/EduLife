@@ -4,9 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class HomeViewModel: ViewModel() {
-    var item = MutableLiveData<Boolean>()
+    var itemCourses = MutableLiveData<Boolean>()
+    var itemReyting = MutableLiveData<Boolean>()
 
-    fun itemSelected(click: Boolean) {
-        item.value = click
+    fun itemSelectedCourses(click: Boolean) {
+        itemCourses.value = click
+    }
+
+    fun itemSelectedReyting(click: Boolean) {
+        itemReyting.value = click
     }
 }

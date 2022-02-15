@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import androidx.core.os.bundleOf
 import androidx.fragment.app.*
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import sarvarmasharipov72.edulife.R
 import sarvarmasharipov72.edulife.ViewModel
@@ -37,7 +35,10 @@ class HomeSubFragment : Fragment() {
         }
 
         view.findViewById<ImageButton>(R.id.taskImage6).setOnClickListener {
-            homeViewModel.itemSelected(true)
+            homeViewModel.itemSelectedCourses(true)
+        }
+        view.findViewById<ImageButton>(R.id.taskImage3).setOnClickListener {
+            homeViewModel.itemSelectedReyting(true)
         }
         return view
     }
