@@ -4,14 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#EFEFEF">
+    android:layout_height="wrap_content">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="620dp"
     tools:context=".ui.HomeSubFragment.HomeSubFragment"
-    android:background="#EFEFEF">
+    android:background="#E6F1F0">
 
     <ImageView
         android:id="@+id/imageCarousel"
