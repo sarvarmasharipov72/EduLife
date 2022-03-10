@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/welcomeFragment"/>
         <action
             android:id="@+id/action_loginFragment_to_loginFragmentOne"
             app:destination="@id/loginFragmentOne" />
@@ -40,9 +42,6 @@
         <action
             android:id="@+id/action_homeFragment_to_rating"
             app:destination="@id/rating" />
-        <action
-            android:id="@+id/action_homeFragment_to_courses"
-            app:destination="@id/courses" />
     </fragment>
     <fragment
         android:id="@+id/profile"
@@ -51,7 +50,9 @@
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profile_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/rating"
@@ -65,22 +66,15 @@
             app:popUpToInclusive="true"/>
     </fragment>
     <fragment
-        android:id="@+id/course"
-        android:name="sarvarmasharipov72.edulife.ui.Courses.Course.Course"
-        android:label="fragment_course"
-        tools:layout="@layout/fragment_course" >
-        <action
-            android:id="@+id/action_course_to_courses"
-            app:destination="@id/courses" />
-    </fragment>
-    <fragment
         android:id="@+id/welcomeFragmentOne"
         android:name="sarvarmasharipov72.edulife.ui.Welcome.WelcomeFragmentOne"
         android:label="fragment_welcome_one"
         tools:layout="@layout/fragment_welcome_one" >
         <action
             android:id="@+id/action_welcomeFragmentOne_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true"/>
         <action
             android:id="@+id/action_welcomeFragmentOne_to_welcomeFragmentTwo"
             app:destination="@id/welcomeFragmentTwo" />
@@ -92,7 +86,9 @@
         tools:layout="@layout/fragment_welcome_two" >
         <action
             android:id="@+id/action_welcomeFragmentTwo_to_welcomeFragmentOne"
-            app:destination="@id/welcomeFragmentOne" />
+            app:destination="@id/welcomeFragmentOne"
+            app:popUpTo="@id/welcomeFragmentOne"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/loginFragmentOne"
@@ -104,7 +100,9 @@
             app:destination="@id/loginFragmentTwo" />
         <action
             android:id="@+id/action_loginFragmentOne_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/loginFragmentTwo"
@@ -116,17 +114,13 @@
             app:destination="@id/homeFragment" />
         <action
             android:id="@+id/action_loginFragmentTwo_to_loginFragmentOne"
-            app:destination="@id/loginFragmentOne" />
+            app:destination="@id/loginFragmentOne"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/loginFragmentOne"/>
     </fragment>
     <fragment
-        android:id="@+id/courses"
-        android:name="sarvarmasharipov72.edulife.ui.Courses.Courses"
-        android:label="Courses" >
-        <action
-            android:id="@+id/action_courses_to_course"
-            app:destination="@id/course" />
-        <action
-            android:id="@+id/action_courses_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        android:id="@+id/course"
+        android:name="sarvarmasharipov72.edulife.ui.Courses.Course.Course"
+        android:label="fragment_course"
+        tools:layout="@layout/fragment_course" />
 </navigation>

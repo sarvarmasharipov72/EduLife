@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import sarvarmasharipov72.edulife.R
 import sarvarmasharipov72.edulife.ui.Courses.model.MyCourse
@@ -27,6 +29,7 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
         private val completeVideo = view.findViewById<TextView>(R.id.completeVideo)
         private val completeTask = view.findViewById<TextView>(R.id.completeTask)
         private val complateTest = view.findViewById<TextView>(R.id.complateTest)
+        val container = view.findViewById<ConstraintLayout>(R.id.containerCoursesMyCourse)
 
         fun bind(myCourse: MyCourse) {
             nameMyCourse.text = myCourse.nameMyCourse
@@ -49,6 +52,7 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
         private val textCource = view.findViewById<TextView>(R.id.textCourceCourse)
         private val price = view.findViewById<TextView>(R.id.priceCourse)
         private val discount = view.findViewById<TextView>(R.id.discountCourse)
+        val container = view.findViewById<ConstraintLayout>(R.id.containerCoursesRecommended)
 
         fun bind(recommended: Recommended) {
             levelCourse.text = recommended.levelCourse
@@ -58,13 +62,13 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
             discount.text = "${recommended.discount.toString()}%"
         }
 
-        fun changes(price: String): String{
-            val size:Int = price.length
+        fun changes(price: String): String {
+            val size: Int = price.length
 
-            return if (size <= 3 ) "$price so'm"
+            return if (size <= 3) "$price so'm"
             else {
-                val endWith = price.toInt()%1000
-                val startWith = price.toInt()/1000
+                val endWith = price.toInt() % 1000
+                val startWith = price.toInt() / 1000
 
                 return if (price.endsWith("000")) {
                     "$startWith.000 so'm"
@@ -75,18 +79,38 @@ class CoursesAdapter : RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoursesViewHolder {
         return when (viewType) {
-            MY_COURSE -> MyCourseHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_courses_my_course, parent, false))
-            FILTER -> MyCourseFilter(LayoutInflater.from(parent.context).inflate(R.layout.filter_item, parent, false))
-            else -> RecommendedCourse(LayoutInflater.from(parent.context).inflate(R.layout.recommended_item, parent, false))
+            MY_COURSE -> MyCourseHolder(
+                LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_courses_my_course, parent, false)
+            )
+            FILTER -> MyCourseFilter(
+                LayoutInflater.from(parent.context).inflate(R.layout.filter_item, parent, false)
+            )
+            else -> RecommendedCourse(
+                LayoutInflater.from(parent.context)
+                    .inflate(R.layout.recommended_item, parent, false)
+            )
         }
     }
 
     override fun onBindViewHolder(holder: CoursesViewHolder, position: Int) {
         when (holder) {
-            is MyCourseHolder -> holder.bind(listOne[position])
-            is RecommendedCourse -> holder.bind(listTwo[position - listOne.size - 1])
+            is MyCourseHolder -> {
+                holder.bind(listOne[position])
+                holder.container.setOnClickListener {
+//                    holder.itemView.findNavController().navigate(R.id.action_courses_to_course)
+                }
+            }
+            is RecommendedCourse -> {
+                holder.bind(listTwo[position - listOne.size - 1])
+                holder.container.setOnClickListener {
+//                    holder.itemView.findNavController().navigate(R.id.action_courses_to_course)
+                }
+            }
         }
+
     }
+
 
     override fun getItemCount(): Int = listOne.size + listTwo.size + 1
 

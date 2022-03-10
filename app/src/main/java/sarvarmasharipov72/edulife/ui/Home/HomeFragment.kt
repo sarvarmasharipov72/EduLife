@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
 
         homeViewModel.itemCourses.observe(this, {
             if (it) {
-                findNavController().navigate(R.id.action_homeFragment_to_courses)
+//                findNavController().navigate(R.id.action_homeFragment_to_courses)
                 homeViewModel.itemSelectedCourses(false)
             }
         })

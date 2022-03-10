@@ -11,7 +11,7 @@
         android:label="fragment_home_sub"
         tools:layout="@layout/fragment_home_sub" />
     <fragment
-        android:id="@+id/courses2"
+        android:id="@+id/courses"
         android:name="sarvarmasharipov72.edulife.ui.Courses.Courses"
         android:label="Courses" />
 </navigation>
